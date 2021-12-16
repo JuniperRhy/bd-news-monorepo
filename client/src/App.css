@@ -1,0 +1,1054 @@
+* {
+  padding: 0;
+}
+
+.OuterMost {
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+
+  align-items: center;
+}
+
+.BDRunContainer {
+  position: absolute;
+  top: 10vh;
+  animation: bdRunContainerHide 3s linear 0s 1;
+}
+
+.BDRun {
+  position: absolute;
+  animation: bdRun 3s linear 0s 1 forwards;
+}
+
+.App {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1rem;
+  position: relative;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  top: 0;
+  margin-top: 12vh;
+  padding-bottom: 10vh;
+  padding-top: 0.5rem;
+  z-index: 1;
+}
+
+p {
+  font-size: 1.2rem;
+  color: goldenrod;
+}
+
+@keyframes bdRunContainerHide {
+  0% {
+    z-index: 4;
+  }
+  99.9% {
+    z-index: 4;
+  }
+  100% {
+    z-index: 0;
+  }
+}
+
+@keyframes bdRun {
+  0% {
+    left: -50vw;
+    transform: scale(0.05) rotate(10deg);
+  }
+  49% {
+    left: -190vw;
+    transform: scale(0.25) rotate(-10deg) scaleX(1);
+  }
+  50% {
+    left: -190vw;
+    transform: scale(0.35) rotate(10deg) scaleX(-1);
+  }
+
+  95.9% {
+    left: -20vw;
+    transform: scale(0.35) rotate(10deg) scaleX(-1) translateY(2vh);
+    opacity: 1;
+  }
+  100% {
+    left: -20vw;
+    transform: scale(0.35) rotate(10deg) scaleX(-1);
+    opacity: 0;
+  }
+}
+
+.RunLeft {
+  animation: bdSteps 0.25s linear 0s infinite forwards;
+}
+
+.RunRight {
+  animation: bdSteps 0.25s linear 0.125s infinite forwards;
+}
+
+@keyframes bdSteps {
+  0% {
+    opacity: 0;
+  }
+  49.5% {
+    opacity: 0;
+  }
+  50.5% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.Non-IntroWapper {
+  animation: nonIntroHide 4.5s linear 0s 1;
+}
+
+@keyframes nonIntroHide {
+  0% {
+    opacity: 0;
+  }
+  64% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+h1 {
+  color: goldenrod;
+  text-shadow: 0 0 70px rgb(122, 217, 255);
+  align-self: center;
+  text-align: center;
+  text-decoration: underline rgb(58, 58, 58);
+
+  -webkit-text-strokewidth: 4px;
+
+  background: radial-gradient(
+    rgba(253, 243, 196, 0.548),
+    #551818,
+    #b7e8ff18,
+    rgba(255, 237, 157, 0)
+  );
+  border-radius: 5px;
+  margin-bottom: 0rem;
+  padding: 0.5rem;
+  padding-bottom: 1.2rem;
+  z-index: 3;
+  position: relative;
+}
+
+.Outline {
+  -webkit-text-stroke-color: rgb(58, 58, 58);
+}
+
+.NewsFeedOn {
+  position: absolute;
+  color: rgb(0, 164, 230);
+
+  text-shadow: 0 0 50px rgb(122, 217, 255);
+  text-align: justify;
+  text-justify: inter-word;
+  text-transform: lowercase;
+  border-top-right-radius: 3rem;
+  border-top-left-radius: 3rem;
+  border-bottom-right-radius: 15rem;
+  border-bottom-left-radius: 3rem;
+  box-shadow: 0 0 80px rgb(122, 217, 255);
+  filter: drop-shadow(0 0 50px #fff);
+  padding-top: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-bottom: 4rem;
+  z-index: 2;
+  background: radial-gradient(#bcedfcf5, #92e6ffd7, #77e2ffce, #fdfeffc4);
+
+  animation: NewsFeedFlicker 2s linear 0s infinite alternate-reverse;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.ProjectorResize {
+  transform: scale(0.85) translateX(650px) translateY(420px);
+}
+
+.ProjectorResize2 {
+  transform: scale(0.85) translateX(450px) translateY(380px);
+}
+
+.App button {
+  height: 5rem;
+  position: relative;
+  max-width: 10rem;
+  border: double 0.1rem rgba(218, 165, 32, 0.466);
+  border-radius: 0.5rem;
+  color: rgb(255, 230, 0);
+  z-index: 3;
+}
+@media only screen and (max-width: 449px) {
+  .BDRun {
+    margin-left: -625vw;
+    top: -380vh;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+  .BDStandard {
+    margin-top: -25rem;
+    margin-right: 15rem;
+    margin-left: -48rem;
+    transform: scale(0.75);
+  }
+  .NewsFeedOn {
+    font-size: 2rem;
+    width: 60vw;
+    height: 60vh;
+    margin-top: 2vh;
+    margin-left: -40vw;
+  }
+  .App button {
+    position: relative;
+    right: -16.5rem;
+    margin-right: 4rem;
+    max-width: 10rem;
+    border: double 0.1rem rgba(218, 165, 32, 0.466);
+    border-radius: 0.5rem;
+    color: rgb(255, 230, 0);
+    z-index: 3;
+  }
+
+  .NewsFeedOn h1 {
+    color: rgb(66, 66, 66);
+    font-size: 1rem;
+  }
+
+  .NewsFeedOn p {
+    color: rgb(66, 66, 66);
+    font-size: 0.5rem;
+  }
+  .MuteButton {
+    transform: scale(0.2);
+    margin-left: 75vw;
+    top: 7vh;
+  }
+  .ProjectorResize {
+    transform: scale(0.55) translateX(2100px) translateY(1400px);
+  }
+
+  .ProjectorResize2 {
+    transform: scale(0.55) translateX(2050px) translateY(1750px);
+  }
+}
+@media only screen and (min-width: 450px) and (max-width: 549px) {
+  .BDRun {
+    margin-left: -4vw;
+    top: -420vh;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+  .BDStandard {
+    margin-top: -25rem;
+    margin-right: 15rem;
+    margin-left: -38rem;
+    transform: scale(0.7);
+  }
+  .NewsFeedOn {
+    font-size: 1.25rem;
+    width: 55vw;
+    height: 60vh;
+    margin-top: -1vh;
+    margin-left: -20vw;
+  }
+  .App button {
+    position: relative;
+    right: -20rem;
+  }
+
+  .NewsFeedOn h1 {
+    color: rgb(66, 66, 66);
+    font-size: 1rem;
+  }
+
+  .NewsFeedOn p {
+    color: rgb(66, 66, 66);
+    font-size: 0.85rem;
+  }
+  .MuteButton {
+    transform: scale(0.2);
+    margin-left: 75vw;
+    top: 7vh;
+  }
+  .ProjectorResize {
+    transform: scale(0.55) translateX(2100px) translateY(1400px);
+  }
+
+  .ProjectorResize2 {
+    transform: scale(0.55) translateX(2050px) translateY(1750px);
+  }
+}
+@media only screen and (min-width: 550px) and (max-width: 650px) {
+  .BDRun {
+    margin-left: -320vw;
+    top: -280vh;
+  }
+
+  h1 {
+    font-size: 1.55rem;
+  }
+  .BDStandard {
+    margin-top: -25rem;
+    margin-right: 15rem;
+    margin-left: -35.5rem;
+    transform: scale(0.85);
+  }
+  .NewsFeedOn {
+    font-size: 1.25rem;
+    width: 54vw;
+    height: 70vh;
+    margin-top: -4vh;
+    margin-left: -15vw;
+  }
+  .App button {
+    position: relative;
+    right: -25rem;
+  }
+  .NewsFeedOn h1 {
+    color: rgb(66, 66, 66);
+    font-size: 1rem;
+  }
+  .MuteButton {
+    transform: scale(0.2);
+    margin-left: 79vw;
+    top: 7vh;
+  }
+  .ProjectorResize {
+    transform: scale(0.55) translateX(2100px) translateY(1400px);
+  }
+
+  .ProjectorResize2 {
+    transform: scale(0.55) translateX(2050px) translateY(1750px);
+  }
+}
+
+@media only screen and (min-width: 650px) and (max-width: 767px) {
+  .BDRun {
+    margin-left: -250vw;
+    top: -310vh;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+  .BDStandard {
+    margin-top: -15rem;
+    margin-right: 15rem;
+    margin-left: -30rem;
+    transform: scale(0.85);
+  }
+
+  .NewsFeedOn {
+    font-size: 1.25rem;
+    width: 50vw;
+    height: 70vh;
+    margin-top: -1vh;
+    margin-left: -7vw;
+  }
+  .App button {
+    right: -32rem;
+  }
+  .NewsFeedOn h1 {
+    color: rgb(66, 66, 66);
+    font-size: 1rem;
+  }
+
+  .NewsFeedOn p {
+    font-size: 0.85rem;
+  }
+  .MuteButton {
+    transform: scale(0.2);
+    margin-left: -7vw;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 878px) {
+  .BDRun {
+    margin-left: -230vw;
+    top: -310vh;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+  .BDStandard {
+    margin-top: -15rem;
+    margin-right: 15rem;
+    margin-left: -24rem;
+    transform: scale(0.85);
+  }
+  .NewsFeedOn {
+    font-size: 1.25rem;
+    width: 53vw;
+    height: 65vh;
+    margin-top: 0vh;
+    margin-left: -5vw;
+  }
+  .NewsFeedOn h1 {
+    color: rgb(66, 66, 66);
+    font-size: 1.5rem;
+  }
+
+  .NewsFeedOn p {
+    font-size: 1rem;
+  }
+  .App button {
+    right: -38rem;
+  }
+  .MuteButton {
+    transform: scale(0.2);
+    margin-left: -5vw;
+  }
+  .ProjectorResize {
+    transform: scale(0.65) translateX(1450px) translateY(980px);
+  }
+
+  .ProjectorResize2 {
+    transform: scale(0.65) translateX(1350px) translateY(940px);
+  }
+}
+
+@media only screen and (min-width: 879px) and (max-width: 1024px) {
+  .BDRun {
+    margin-left: -100vw;
+    top: -310vh;
+  }
+
+  .BDStandard {
+    margin-top: -15rem;
+    margin-right: 15rem;
+    margin-left: -20rem;
+    transform: scale(0.9);
+  }
+  .NewsFeedOn {
+    font-size: 1.25rem;
+    width: 45vw;
+    height: 70vh;
+    margin-top: -1vh;
+    margin-left: 6vw;
+  }
+  .NewsFeedOn h1 {
+    color: rgb(66, 66, 66);
+    font-size: 1.5rem;
+  }
+
+  .NewsFeedOn p {
+    font-size: 1rem;
+  }
+  .App button {
+    right: -43rem;
+  }
+  .MuteButton {
+    transform: scale(0.2);
+    margin-left: 0;
+  }
+}
+
+@media only screen and (min-width: 1025px) and (max-width: 1149px) {
+  .BDRun {
+    margin-left: -120vw;
+    top: -310vh;
+  }
+
+  .BDStandard {
+    margin-top: -12rem;
+    margin-right: 15rem;
+    margin-left: -19rem;
+    transform: scale(0.85);
+  }
+  .NewsFeedOn {
+    font-size: 1.25rem;
+    width: 48vw;
+    height: 70vh;
+    margin-top: 0vh;
+    margin-left: 2vw;
+  }
+
+  .NewsFeedOn h1 {
+    color: rgb(66, 66, 66);
+    font-size: 1.5rem;
+  }
+  .App button {
+    margin-left: 5rem;
+    margin-right: 3rem;
+    margin-top: 10rem;
+  }
+  .MuteButton {
+    transform: scale(0.2);
+    margin-left: 0;
+  }
+}
+
+@media only screen and (min-width: 1150px) and (max-width: 1299px) {
+  .BDRun {
+    margin-left: -70vw;
+    top: -310vh;
+  }
+
+  .BDStandard {
+    margin-top: -12rem;
+    margin-right: 15rem;
+    margin-left: -15rem;
+    transform: scale(0.9);
+  }
+  .NewsFeedOn {
+    font-size: 1.25rem;
+    width: 43vw;
+    height: 70vh;
+    margin-top: -1vh;
+    margin-left: 2vw;
+  }
+  .NewsFeedOn h1 {
+    color: rgb(66, 66, 66);
+    font-size: 1.5rem;
+  }
+
+  .NewsFeedOn h1 {
+    color: rgb(66, 66, 66);
+    font-size: 1.5;
+  }
+  .App button {
+    margin-left: 10rem;
+    margin-top: 10rem;
+  }
+  .MuteButton {
+    transform: scale(0.2);
+    margin-left: 0;
+  }
+}
+
+@media only screen and (min-width: 1300px) and (max-width: 1499px) {
+  .BDRun {
+    margin-left: -60vw;
+    top: -373vh;
+  }
+
+  .BDStandard {
+    margin-top: -16.5rem;
+    margin-right: 15rem;
+    margin-left: -6rem;
+    transform: scale(0.95);
+  }
+  .NewsFeedOn {
+    font-size: 1.25rem;
+    width: 38vw;
+    height: 70vh;
+    margin-top: 0vh;
+    margin-left: 6vw;
+  }
+
+  .NewsFeedOn h1 {
+    color: rgb(66, 66, 66);
+    font-size: 1.5rem;
+  }
+  .App button {
+    margin-left: 10rem;
+    margin-top: 10rem;
+  }
+  .MuteButton {
+    transform: scale(0.2);
+    margin-left: 0;
+  }
+  .ProjectorResize {
+    transform: scale(0.65) translateX(1450px) translateY(980px);
+  }
+
+  .ProjectorResize2 {
+    transform: scale(0.65) translateX(1350px) translateY(1150px);
+  }
+}
+
+@media only screen and (min-width: 1500px) and (max-width: 1649px) {
+  .BDRun {
+    left: 50vw;
+    top: -310vh;
+  }
+
+  .BDStandard {
+    margin-top: -13rem;
+    margin-right: 15rem;
+    margin-left: 4rem;
+    transform: scale(0.95);
+  }
+  .NewsFeedOn {
+    width: 38vw;
+    height: 70vh;
+    margin-top: 0vh;
+    margin-left: 15vw;
+  }
+  .NewsFeedOn h1 {
+    color: rgb(66, 66, 66);
+    font-size: 1.5;
+  }
+  .App button {
+    margin-left: 10rem;
+    margin-top: 10rem;
+  }
+  .MuteButton {
+    transform: scale(0.25);
+    margin-left: 0;
+  }
+}
+
+@media only screen and (min-width: 1650px) and (max-width: 1899px) {
+  .BDRun {
+    top: -310vh;
+  }
+  .BDStandard {
+    margin-top: -14rem;
+    margin-right: 20rem;
+    margin-left: 10vw;
+    transform: scale(0.95);
+  }
+  .NewsFeedOn {
+    width: 38vw;
+    height: 70vh;
+    margin-top: 0vh;
+    margin-left: 15vw;
+  }
+  .NewsFeedOn h1 {
+    color: rgb(66, 66, 66);
+    font-size: 1.5;
+  }
+  .App button {
+    margin-left: 10rem;
+    margin-top: 20rem;
+  }
+  .MuteButton {
+    transform: scale(0.25);
+    margin-left: 0;
+  }
+}
+
+@media only screen and (min-width: 1900px) {
+  .BDRun {
+    top: -300vh;
+  }
+  .BDStandard {
+    margin-top: -7rem;
+    margin-right: 20rem;
+    margin-left: 20vw;
+    transform: scale(1.2);
+  }
+
+  @keyframes bdAppear {
+    0% {
+      visibility: hidden;
+    }
+    99% {
+      visibility: hidden;
+    }
+    100% {
+      visibility: visible;
+    }
+  }
+  .NewsFeedOn {
+    width: 38vw;
+    height: 70vh;
+    margin-top: 0vh;
+    margin-left: 15vw;
+  }
+  .NewsFeedOn h1 {
+    color: rgb(66, 66, 66);
+    font-size: 1.5;
+  }
+  .App button {
+    margin-left: 10rem;
+    margin-top: 20rem;
+  }
+
+  .MuteButton {
+    transform: scale(0.25);
+    margin-left: 0;
+  }
+}
+
+.MuteButton {
+  position: fixed;
+  margin-top: 0vh;
+  margin-right: 0vw;
+  margin-bottom: -8vh;
+  cursor: pointer;
+  padding: 0;
+  opacity: 0.25;
+  z-index: 4;
+}
+
+.MuteButton:hover {
+  filter: drop-shadow(0 0 50px rgb(157, 240, 255));
+  opacity: 1;
+}
+
+button {
+  cursor: pointer;
+}
+
+.NewsFeedVisible {
+  visibility: visible;
+  padding: 0rem;
+  margin: 0rem;
+  opacity: 1;
+  transition: all 0.5s ease-out 0.9s;
+  z-index: 2;
+}
+
+.NewsFeedInvisible,
+.NewsFeedInvisible .NewsFeedOn a {
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.5s ease-in 0s;
+  z-index: 2;
+}
+
+li {
+  border-top: 3px solid rgb(255, 194, 41);
+  border-bottom: 3px solid rgb(255, 194, 41);
+  border-left: 3px solid linearGradient(goldenrod, transparent, goldenrod);
+  border-right: 3px solid linearGradient(goldenrod, transparent, goldenrod);
+  border-radius: 1rem;
+  padding: 1rem;
+  margin: 1rem;
+  box-shadow: 0 0 25px rgb(255, 255, 255);
+}
+
+li:hover {
+  border: 3px solid rgb(255, 194, 41);
+  padding-left: calc(1rem - 3px);
+  padding-right: calc(1rem - 3px);
+  box-shadow: 0 0 50px rgb(255, 255, 255);
+}
+
+.NewsFeedOff {
+  position: absolute;
+  width: 15vw;
+  height: 24vh;
+  margin-top: 0vh;
+  margin-left: 14vw;
+  border-top-right-radius: 3rem;
+  border-top-left-radius: 3rem;
+  border-bottom-right-radius: 6rem;
+  border-bottom-left-radius: 3rem;
+  box-shadow: 0 0 80px rgb(122, 217, 255);
+  filter: drop-shadow(0 0 50px #fff);
+  padding: 4rem;
+  z-index: 2;
+  background: radial-gradient(#bcedfccb, #f3fcffb7, #92e6ffd7, #b1e6f87e);
+  opacity: 0;
+  transition: all 4s linear 0s;
+}
+
+@keyframes NewsFeedFlicker {
+  0% {
+    box-shadow: 0 0 50px rgb(198, 239, 255);
+    opacity: 1;
+  }
+  20% {
+    box-shadow: 0 0 80px rgb(122, 217, 255);
+    opacity: 0.9;
+  }
+  50% {
+    box-shadow: 0 0 80px rgb(122, 217, 255);
+    opacity: 1;
+  }
+  70% {
+    box-shadow: 0 0 80px rgb(122, 217, 255);
+    opacity: 0.9;
+  }
+  90% {
+    box-shadow: 0 0 80px rgb(122, 217, 255);
+    opacity: 1;
+  }
+  100% {
+    box-shadow: 0 0 50px rgb(122, 217, 255);
+    opacity: 0.9;
+  }
+}
+
+.NewsFeedOn h1 {
+  background: radial-gradient(
+    #fff,
+    rgba(255, 255, 255, 0),
+    rgba(255, 255, 255, 0)
+  );
+}
+
+.NewsFeedOn::-webkit-scrollbar {
+  right: 5vw;
+  width: 0.75vw;
+  height: 20vh;
+}
+
+.NewsFeedOn::-webkit-scrollbar-track {
+  background: radial-gradient(transparent 60%, rgba(218, 165, 32, 0.692));
+  box-shadow: inset 0 0 5px rgba(218, 165, 32, 0.74);
+  border-radius: 10px;
+}
+.NewsFeedOn::-webkit-scrollbar-track:hover {
+  background: radial-gradient(transparent 60%, rgba(218, 165, 32, 0.692));
+  border: solid 1px goldenrod;
+  box-shadow: inset 0 0 5px rgb(255, 248, 207);
+  border-radius: 10px;
+}
+
+.NewsFeedOn::-webkit-scrollbar-thumb {
+  background: radial-gradient(
+    rgba(218, 165, 32, 0.452),
+    rgba(218, 165, 32, 0.692)
+  );
+  border: goldenrod;
+  box-shadow: inset 0 0 5px rgb(255, 197, 1, 0.75);
+  border-radius: 10px;
+  transition: 0.25s all 1s ease-in-out;
+}
+
+.NewsFeedOn::-webkit-scrollbar-thumb:hover {
+  background: radial-gradient(rgba(255, 209, 5, 0.692), goldenrod);
+  border: 1px solid rgb(97, 97, 97);
+  transition: 0.25s all 1s ease-in-out;
+}
+
+@keyframes AppFadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+img {
+  border: 1px solid rgb(0, 126, 175);
+  border-radius: 0.25rem;
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.61);
+  width: 100%;
+  height: auto;
+}
+
+img:hover {
+  border: 1px solid rgb(214, 159, 18);
+  box-shadow: 0 0 50px rgb(255, 255, 255);
+}
+
+.NewsFeedOn a {
+  color: rgb(192, 147, 33);
+  text-shadow: 0 0 50px rgb(228, 228, 228);
+  cursor: pointer;
+  text-decoration: underline double;
+}
+
+.NewsFeedOn a:hover {
+  color: rgb(69, 80, 85);
+  text-shadow: 0 0 50px rgb(255, 217, 0);
+}
+
+p small {
+  font-size: 0.75rem;
+  text-decoration: underline double 0.5px;
+  text-align: right;
+}
+
+.BDStandardBody {
+  animation: bdAppear ease-out 3s linear 0s 1 forwards;
+  cursor: pointer;
+  z-index: 2;
+}
+
+@keyframes squat {
+  0% {
+    opacity: 0;
+  }
+  49.9% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.BDHop {
+  animation: bdHop 0.45s linear 0s 1 forwards;
+}
+@keyframes bdHop {
+  0% {
+    opacity: 0;
+    transform: translateY(0rem);
+  }
+  2% {
+    opacity: 1;
+    transform: translateY(0rem);
+  }
+
+  50% {
+    transform: translateY(-20rem);
+  }
+
+  98% {
+    opacity: 1;
+    transform: translateY(0rem);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(0rem);
+  }
+}
+
+.HideBDHop {
+  animation: bdHop2 0.45s linear 0s 1 forwards;
+}
+
+@keyframes bdHop2 {
+  0% {
+    opacity: 0;
+    transform: translateY(0rem);
+  }
+  2% {
+    opacity: 1;
+    transform: translateY(0rem);
+  }
+
+  50% {
+    transform: translateY(-20rem);
+  }
+
+  98% {
+    opacity: 1;
+    transform: translateY(0rem);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(0rem);
+  }
+}
+
+.HideForHop {
+  animation: hideForHop 0.45s linear 0s 1 forwards;
+}
+
+@keyframes hideForHop {
+  0% {
+    opacity: 1;
+  }
+  2% {
+    opacity: 0;
+  }
+  98% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.HideForHop2 {
+  animation: hideForHop2 0.45s linear 0s 1 forwards;
+}
+
+@keyframes hideForHop2 {
+  0% {
+    opacity: 1;
+  }
+  2% {
+    opacity: 0;
+  }
+  98% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.ProjectorNotPowerUp {
+  opacity: 0;
+}
+
+.ProjectorPowerUp {
+  animation: ProjectorPowerOn 0.125s ease-in 0s 5;
+}
+
+@keyframes ProjectorPowerOn {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.ProjectorOn {
+  transition: all 3s linear;
+  transition-delay: 3s;
+  animation: Projector 1.5s linear 0.5s infinite alternate;
+}
+
+@keyframes Projector {
+  0% {
+    opacity: 1;
+  }
+  45% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.75;
+  }
+  55% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 0.75;
+  }
+  75% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0.55;
+  }
+  85% {
+    opacity: 0.75;
+  }
+
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.ProjectorOff {
+  opacity: 0;
+  transition: all 10s linear 0s;
+}
+
+@font-face {
+  font-family: Aurebesh;
+  src: url(./Media/Fonts/englbesh.ttf);
+}
+
+@font-face {
+  font-family: StarJedi;
+  src: url(./Media/Fonts/Starjedi.ttf);
+}
