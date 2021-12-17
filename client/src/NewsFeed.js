@@ -42,20 +42,15 @@ export default function NewsFeed({ isBDClicked, changeFont }) {
                     alt={formattedArticle.title}
                   />
                 </a>
-                <h1
-                  style={{
-                    webkitTextStrokeColor: changeFont
-                      ? "transparent"
-                      : "rgb(219, 190, 24)",
-                    lineHeight: changeFont ? "3.5vh" : "5vh",
-                  }}
-                >
+                <h1>
                   <a
                     href={formattedArticle.link}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    {formattedArticle.title.replace("#", "")}
+                    {formattedArticle.title
+                      .replace("#", "")
+                      .replace("&", "and")}
                   </a>
                 </h1>
                 <p>{formattedArticle.tagLine.replace("!", "")}</p>

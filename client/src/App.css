@@ -36,7 +36,7 @@ p {
   padding: -0.5vw;
   font-size: 3.5vh;
   color: goldenrod;
-  line-height: 3vh;
+  line-height: 2.5vh;
   direction: ltr;
 }
 
@@ -231,19 +231,20 @@ button {
   grid-column: 2;
   grid-row: 4;
   min-height: 10vw;
-  width: auto;
+  min-width: 13vw;
   border: double 0.1rem rgba(218, 165, 32, 0.466);
   border-radius: 0.5rem;
   color: rgb(255, 230, 0);
-  font-size: 2.75vw;
+  font-size: 2vw;
   z-index: 3;
   cursor: pointer;
   line-height: 4vh;
   margin-top: 30vh;
   margin-bottom: 30vh;
   margin-left: 0.5vw;
-  margin-right: 0.5vw;
+  margin-right: 2.5vw;
   padding: 0.5vh;
+  padding-right: 1vw;
 }
 
 .ProjectorResize {
@@ -308,19 +309,20 @@ BDStandard {
 li {
   border-top: 3px solid rgb(255, 194, 41);
   border-bottom: 3px solid rgb(255, 194, 41);
-  border-left: 3px solid linearGradient(goldenrod, transparent, goldenrod);
-  border-right: 3px solid linearGradient(goldenrod, transparent, goldenrod);
+  border-left: 3px solid transparent;
+  border-right: 3px solid transparent;
   border-radius: 1rem;
   padding: 1rem;
   margin: 1rem;
-  box-shadow: 0 0 25px rgb(255, 255, 255);
+  box-shadow: 0 0 50px rgba(255, 255, 255, 0.466);
   width: auto;
+  list-style: none;
 }
 
 li:hover {
   border: 3px solid rgb(255, 194, 41);
-  padding-left: calc(1rem - 3px);
-  padding-right: calc(1rem - 3px);
+  /* padding-left: calc(1rem - 3px);
+  padding-right: calc(1rem - 3px); */
   box-shadow: 0 0 50px rgb(255, 255, 255);
 }
 
@@ -384,6 +386,7 @@ li:hover {
     rgba(255, 255, 255, 0),
     rgba(255, 255, 255, 0)
   );
+  line-height: 4.5vw !important;
 }
 
 @keyframes AppFadeIn {
@@ -401,7 +404,7 @@ img {
   box-shadow: 0 0 50px rgba(255, 255, 255, 0.377);
   width: 100%;
   height: auto;
-  margin-bottom: -1vh;
+  margin-bottom: -4vh;
 }
 
 img:hover {
@@ -413,7 +416,7 @@ img:hover {
 .NewsFeedOff a {
   color: rgb(192, 147, 33);
   text-shadow: 0 0 50px rgb(228, 228, 228);
-  font-size: 4.5vh;
+  font-size: 4vh;
   padding: -0.5vw;
   cursor: pointer;
   text-decoration: underline double;
@@ -618,7 +621,7 @@ small {
   transition: all 10s linear 0s;
 }
 
-@media only screen and (max-width: 640px) {
+@media only screen and (max-width: 750px) {
   .NewsFeedOn {
     width: 62.5vw;
     height: 58.5vh;
@@ -626,7 +629,7 @@ small {
 
   .NewsFeedOn a {
     font-size: 2.5vh;
-    line-height: -0.5vh !important;
+    line-height: 0.2vw !important;
   }
 
   .NewsFeedOn p {
@@ -643,13 +646,21 @@ small {
     transform: translateX(-100.5vw) translateY(-100vh);
   }
   .ProjectorResize {
-    transform: scale(0.25) translateX(7200px) translateY(4900px);
+    transform: scale(0.36) skewX(25deg) translateX(2260px) translateY(2950px);
     filter: drop-shadow(0 0 50px #fff);
   }
 
   .ProjectorResize2 {
-    transform: scale(0.25) translateX(7500px) translateY(6350px);
+    transform: scale(0.4) translateX(3760px) translateY(3190px);
     filter: drop-shadow(0 0 50px #fff);
+  }
+  button {
+    font-size: 2vh;
+    line-height: 3vw;
+  }
+
+  img {
+    margin-bottom: -4vh;
   }
 }
 

@@ -90,7 +90,7 @@ function App() {
           style={{
             marginTop: changeFont ? "0vh" : "1vh",
             marginBottom: changeFont ? "-11vh" : "-8vh",
-            fontSize: changeFont ? "3vh" : "5vh",
+            fontSize: changeFont ? "4vh" : "6vh",
           }}
           className={changeFont ? "" : "Outline"}
         >
