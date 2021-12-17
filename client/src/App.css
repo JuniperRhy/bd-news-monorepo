@@ -410,6 +410,7 @@ img:hover {
 .NewsFeedOff a:hover {
   color: rgb(69, 80, 85);
   text-shadow: 0 0 50px rgb(255, 217, 0);
+  line-height: 2.5vw;
 }
 
 p small {
