@@ -23,7 +23,7 @@ export default function bd1Standard({
         >
           <g
             style={{
-              transform: "translateX(-10rem) translateY(-35rem)",
+              transform: "translateX(-10vw) translateY(-55vh)",
             }}
           >
             <g className={changeFont && !isBDClicked ? "BDHop" : "HideBDHop"}>

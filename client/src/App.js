@@ -96,49 +96,44 @@ function App() {
         >
           BD-1's Star Wars News Feed
         </h1>
-        <div className="App">
-          <button
-            onMouseEnter={() => setHoverChangeFont(!hoverChangeFont)}
-            onMouseLeave={() => setHoverChangeFont(!hoverChangeFont)}
-            onClick={() => {
-              setChangeFont(!changeFont);
-              Beep.play();
-            }}
-            style={{
-              background: changeFont
-                ? "radial-gradient(#71e3ff, #dbf4ffb0, #b7e8ff18)"
-                : "rgba(85, 24, 24)",
 
-              fontFamily: changeFont ? "Aurebesh" : "StarJedi",
-              fontSize: changeFont ? "" : "1.125rem",
-              padding: changeFont ? "" : ".5rem",
-              webkitTextStrokeColor: changeFont
-                ? "transparent"
-                : "rgb(219, 190, 24)",
-              color: changeFont ? "rgb(66, 66, 66)" : "rgb(134, 116, 14)",
-              boxShadow: hoverChangeFont
-                ? "0 0 50px rgb(255, 255, 255)"
-                : " 0 0 50px transparent",
+        <button
+          onMouseEnter={() => setHoverChangeFont(!hoverChangeFont)}
+          onMouseLeave={() => setHoverChangeFont(!hoverChangeFont)}
+          onClick={() => {
+            setChangeFont(!changeFont);
+            Beep.play();
+          }}
+          style={{
+            background: changeFont
+              ? "radial-gradient(#71e3ff, #dbf4ffb0, #b7e8ff18)"
+              : "rgba(85, 24, 24)",
+            fontFamily: changeFont ? "Aurebesh" : "StarJedi",
+            webkitTextStrokeColor: changeFont
+              ? "transparent"
+              : "rgb(219, 190, 24)",
+            color: changeFont ? "rgb(66, 66, 66)" : "rgb(134, 116, 14)",
+            boxShadow: hoverChangeFont
+              ? "0 0 50px rgb(255, 255, 255)"
+              : " 0 0 50px transparent",
 
-              border: hoverChangeFont
-                ? "double 0.1rem goldenrod"
-                : "double 0.1rem rgba(218, 165, 32, 0.466)",
-            }}
-          >
-            Change Font
-          </button>
+            border: hoverChangeFont
+              ? "double 0.1rem goldenrod"
+              : "double 0.1rem rgba(218, 165, 32, 0.466)",
+          }}
+        >
+          Change Font
+        </button>
 
-          <NewsFeed isBDClicked={isBDClicked} changeFont={changeFont} />
-          <div>
-            <BDStandard
-              changeFont={changeFont}
-              isBDClicked={isBDClicked}
-              setIsBDClicked={setIsBDClicked}
-              isBDHover={isBDHover}
-              setIsBDHover={setIsBDHover}
-            />
-          </div>
-        </div>
+        <NewsFeed isBDClicked={isBDClicked} changeFont={changeFont} />
+
+        <BDStandard
+          changeFont={changeFont}
+          isBDClicked={isBDClicked}
+          setIsBDClicked={setIsBDClicked}
+          isBDHover={isBDHover}
+          setIsBDHover={setIsBDHover}
+        />
       </div>
     </div>
   );

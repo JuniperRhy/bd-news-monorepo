@@ -47,7 +47,7 @@ export default function NewsFeed({ isBDClicked, changeFont }) {
                     webkitTextStrokeColor: changeFont
                       ? "transparent"
                       : "rgb(219, 190, 24)",
-                    lineHeight: changeFont ? "" : "1.15em",
+                    lineHeight: changeFont ? "2.2vw" : "2.5vw",
                   }}
                 >
                   <a
@@ -58,9 +58,11 @@ export default function NewsFeed({ isBDClicked, changeFont }) {
                     {formattedArticle.title.replace("#", "")}
                   </a>
                 </h1>
-                <p>{formattedArticle.tagLine}</p>
+                <p style={{ lineHeight: changeFont ? "1.5vw" : "1.75vw" }}>
+                  {formattedArticle.tagLine}
+                </p>
                 <p>
-                  <small>
+                  <small style={{ lineHeight: changeFont ? ".5vw" : ".75vw" }}>
                     {formattedArticle.byLineAuthor.replace(
                       "Posts by",
                       "article by"
