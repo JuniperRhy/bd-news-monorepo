@@ -26,8 +26,9 @@
 
 p {
   padding: -0.5vw;
-  font-size: 1.7vw;
+  font-size: 2vw;
   color: goldenrod;
+  line-height: 1.75vw;
 }
 
 @keyframes bdRunContainerHide {
@@ -219,11 +220,11 @@ button {
   grid-column: 2;
   grid-row: 4;
   height: 10vh;
-  max-width: 8vw;
+  width: 8vw;
   border: double 0.1rem rgba(218, 165, 32, 0.466);
   border-radius: 0.5rem;
   color: rgb(255, 230, 0);
-  font-size: 1.25vw;
+  font-size: 1.5vw;
   z-index: 3;
   cursor: pointer;
   margin-top: 30vh;
@@ -397,11 +398,12 @@ img:hover {
 .NewsFeedOff a {
   color: rgb(192, 147, 33);
   text-shadow: 0 0 50px rgb(228, 228, 228);
-  font-size: 2.2vw;
+  font-size: 2.4vw;
   padding: -0.5vw;
   cursor: pointer;
   text-decoration: underline double;
   margin-bottom: -2vh;
+  line-height: 2.5vw;
 }
 
 .NewsFeedOn a:hover,
@@ -602,12 +604,10 @@ p small {
 
 @font-face {
   font-family: Aurebesh;
-  src: url(./Media/Fonts/englbesh.ttf);
-  line-height: 1.5rem;
+  src: url(./Media/Fonts/mandalorexpand.ttf);
 }
 
 @font-face {
   font-family: StarJedi;
   src: url(./Media/Fonts/Starjedi.ttf);
-  line-height: 0rem;
 }
