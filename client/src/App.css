@@ -36,7 +36,7 @@ p {
   padding: -0.5vw;
   font-size: 3.5vh;
   color: goldenrod;
-  line-height: 2.5vh;
+  line-height: 3vh;
   direction: ltr;
 }
 
@@ -386,7 +386,7 @@ li:hover {
     rgba(255, 255, 255, 0),
     rgba(255, 255, 255, 0)
   );
-  line-height: 4.5vw !important;
+  line-height: 2.5vw !important;
 }
 
 @keyframes AppFadeIn {
@@ -661,6 +661,12 @@ small {
 
   img {
     margin-bottom: -4vh;
+  }
+}
+
+@media only screen and (min-width: 751px) and (max-width: 1200px) {
+  .NewsFeedOn h1 {
+    line-height: 4.5vh !important;
   }
 }
 
