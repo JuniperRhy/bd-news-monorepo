@@ -629,7 +629,7 @@ small {
 
   .NewsFeedOn a {
     font-size: 2.5vh;
-    line-height: 0.2vw !important;
+    line-height: 2vw !important;
   }
 
   .NewsFeedOn p {
