@@ -47,7 +47,7 @@ export default function NewsFeed({ isBDClicked, changeFont }) {
                     webkitTextStrokeColor: changeFont
                       ? "transparent"
                       : "rgb(219, 190, 24)",
-                    lineHeight: changeFont ? "4.5vh" : "5vh",
+                    lineHeight: changeFont ? "3.5vh" : "5vh",
                   }}
                 >
                   <a
