@@ -55,7 +55,7 @@ export default function NewsFeed({ isBDClicked, changeFont }) {
                 </h1>
                 <p>{formattedArticle.tagLine.replace("!", "")}</p>
 
-                <small style={{ lineHeight: changeFont ? ".25vh" : "3vh" }}>
+                <small>
                   {formattedArticle.byLineAuthor.replace(
                     "Posts by",
                     "article by"
