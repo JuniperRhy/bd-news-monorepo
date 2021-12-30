@@ -50,7 +50,9 @@ export default function NewsFeed({ isBDClicked, changeFont }) {
                   >
                     {formattedArticle.title
                       .replace("#", "")
-                      .replace("&", "and")}
+                      .replace("&", "and")
+                      .replace("!", "")
+                      .replace("?", "")}
                   </a>
                 </h1>
                 <p>{formattedArticle.tagLine.replace("!", "")}</p>
