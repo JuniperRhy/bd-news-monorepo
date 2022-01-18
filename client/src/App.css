@@ -188,7 +188,7 @@ h1 {
 
 .NewsFeedOn::-webkit-scrollbar {
   right: 10vw;
-  width: 1.5vw;
+  width: 15px;
   height: 20vh;
 }
 
