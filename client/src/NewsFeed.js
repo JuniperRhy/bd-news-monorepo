@@ -3,7 +3,7 @@ const cors = require("cors");
 const axios = require("axios");
 const cheerio = require("cheerio");
 
-export default function NewsFeed({ isBDClicked, changeFont }) {
+export default function NewsFeed({ isBDClicked, changeFont, hyperdrive }) {
   const [formattedArticles, setFormattedArticles] = useState([]);
 
   useEffect(() => {
@@ -42,7 +42,7 @@ export default function NewsFeed({ isBDClicked, changeFont }) {
                     alt={formattedArticle.title}
                   />
                 </a>
-                <h1>
+                <h1 onClick={() => hyperdrive.play()}>
                   <a
                     href={formattedArticle.link}
                     target="_blank"

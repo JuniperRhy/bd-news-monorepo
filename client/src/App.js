@@ -19,6 +19,7 @@ import BDsound6 from "./Media/audio/6BD1.mp3";
 import BDBeep from "./Media/audio/BDBeep.mp3";
 import HoloActiveSound from "./Media/audio/Holoactive.mp3";
 import HoloOff from "./Media/audio/Holooff.mp3";
+import HyperdriveSound from "./Media/audio/Hyperdrive.m4a";
 
 import "./App.css";
 
@@ -56,6 +57,12 @@ function App() {
   const HoloOffSound = new Howl({
     src: HoloOff,
     volume: isPageMuted ? "0" : "0.05",
+    loop: false,
+  });
+
+  const Hyperdrive = new Howl({
+    src: HyperdriveSound,
+    volume: isPageMuted ? "0" : "0.2",
     loop: false,
   });
 
@@ -125,7 +132,11 @@ function App() {
           Change Font
         </button>
 
-        <NewsFeed isBDClicked={isBDClicked} changeFont={changeFont} />
+        <NewsFeed
+          hyperdrive={Hyperdrive}
+          isBDClicked={isBDClicked}
+          changeFont={changeFont}
+        />
 
         <BDStandard
           changeFont={changeFont}
