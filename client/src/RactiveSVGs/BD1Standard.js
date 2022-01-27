@@ -15,13 +15,12 @@ export default function bd1Standard({
         xmlns="http://www.w3.org/2000/svg"
         className="BDStandard"
       >
-        <g
-          onMouseEnter={() => {
-            setIsBDHover(!isBDHover);
-          }}
-          onMouseLeave={() => setIsBDHover(!isBDHover)}
-        >
+        <g>
           <g
+            onMouseEnter={() => {
+              setIsBDHover(!isBDHover);
+            }}
+            onMouseLeave={() => setIsBDHover(!isBDHover)}
             style={{
               transform: "translateX(-10vw) translateY(-55vh)",
             }}
