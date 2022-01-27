@@ -36,6 +36,7 @@ export default function NewsFeed({ isBDClicked, changeFont, hyperdrive }) {
                   href={formattedArticle.link}
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={() => hyperdrive.play()}
                 >
                   <img
                     src={formattedArticle.imageSrc}
