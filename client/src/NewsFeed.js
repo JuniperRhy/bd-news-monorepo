@@ -57,7 +57,11 @@ export default function NewsFeed({ isBDClicked, changeFont, hyperdrive }) {
                       .replace(`“`, ``)}
                   </a>
                 </h1>
-                <p>{formattedArticle.tagLine.replace("!", "")}</p>
+                <p>
+                  {formattedArticle.tagLine
+                    .replace("!", "")
+                    .replace("#", "number ")}
+                </p>
 
                 <small>
                   {formattedArticle.byLineAuthor.replace(
