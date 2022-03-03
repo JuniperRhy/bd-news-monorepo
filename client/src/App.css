@@ -387,6 +387,7 @@ li:hover {
     rgba(255, 255, 255, 0)
   );
   line-height: 2.5vw !important;
+  direction: ltr;
 }
 
 @keyframes AppFadeIn {

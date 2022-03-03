@@ -48,7 +48,7 @@ app.get("/api", async (req, res) => {
 
 app.get("/health", (_req, res) => {
   console.log("Health Endpoint");
-  res.send("Hello Butts");
+  res.send("Hello");
 });
 
 app.listen(PORT, () => {
