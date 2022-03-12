@@ -28,7 +28,7 @@ export default function NewsFeed({ isBDClicked, changeFont, hyperdrive }) {
             .filter(
               (formattedArticle) =>
                 formattedArticle.title &&
-                formattedArticle.tagLine &&
+                // formattedArticle.tagLine &&
                 formattedArticle.byLineAuthor !== undefined
             )
             .map((formattedArticle, index) => (
@@ -60,9 +60,13 @@ export default function NewsFeed({ isBDClicked, changeFont, hyperdrive }) {
                   </a>
                 </h1>
                 <p>
-                  {formattedArticle.tagLine
-                    .replace("!", "")
-                    .replace("#", "number ")}
+                  {formattedArticle.tagLine ? (
+                    formattedArticle.tagLine
+                      .replace("!", "")
+                      .replace("#", "number ")
+                  ) : (
+                    <br />
+                  )}
                 </p>
 
                 <small>
