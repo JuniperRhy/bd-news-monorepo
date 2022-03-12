@@ -60,13 +60,11 @@ export default function NewsFeed({ isBDClicked, changeFont, hyperdrive }) {
                   </a>
                 </h1>
                 <p>
-                  {formattedArticle.tagLine ? (
-                    formattedArticle.tagLine
-                      .replace("!", "")
-                      .replace("#", "number ")
-                  ) : (
-                    <br />
-                  )}
+                  {formattedArticle.tagLine
+                    ? formattedArticle.tagLine
+                        .replace("!", "")
+                        .replace("#", "number ")
+                    : ""}
                 </p>
 
                 <small>
