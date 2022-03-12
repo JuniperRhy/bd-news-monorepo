@@ -28,6 +28,7 @@ export default function NewsFeed({ isBDClicked, changeFont, hyperdrive }) {
             .filter(
               (formattedArticle) =>
                 formattedArticle.title &&
+                formattedArticle.tagLine &&
                 formattedArticle.byLineAuthor !== undefined
             )
             .map((formattedArticle, index) => (
