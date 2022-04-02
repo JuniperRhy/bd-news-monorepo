@@ -622,7 +622,20 @@ small {
   transition: all 10s linear 0s;
 }
 
-@media only screen and (max-width: 750px) {
+.bdcolorLink {
+  grid-column: 1;
+  grid-row: 5;
+  z-index: 5;
+  margin-top: 70vh;
+  padding: 1vw;
+  text-align: left;
+}
+
+.bdcolorLink:hover {
+  text-shadow: 0 0 25px rgb(255, 255, 255);
+}
+
+@media only screen and (max-width: 900px) {
   .NewsFeedOn {
     width: 62.5vw;
     height: 58.5vh;

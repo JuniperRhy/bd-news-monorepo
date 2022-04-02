@@ -19,7 +19,7 @@ import BDsound6 from "./Media/audio/6BD1.mp3";
 import BDBeep from "./Media/audio/BDBeep.mp3";
 import HoloActiveSound from "./Media/audio/Holoactive.mp3";
 import HoloOff from "./Media/audio/Holooff.mp3";
-import HyperdriveSound from "./Media/audio/Hyperdrive.m4a";
+import HyperdriveSound from "./Media/audio/Hyperdrive.mp3";
 
 import "./App.css";
 
@@ -145,6 +145,16 @@ function App() {
           isBDHover={isBDHover}
           setIsBDHover={setIsBDHover}
         />
+        <h4 onClick={() => Hyperdrive.play()} className="bdcolorLink">
+          <a
+            href="https://bd-colors.herokuapp.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ color: "rgb(134, 116, 14)" }}
+          >
+            BD Rainbow
+          </a>
+        </h4>
       </div>
     </div>
   );
