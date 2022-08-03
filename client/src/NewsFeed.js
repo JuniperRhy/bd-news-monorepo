@@ -61,7 +61,7 @@ export default function NewsFeed({ isBDClicked, changeFont, hyperdrive }) {
                 </h1>
                 <p>
                   {formattedArticle.tagLine &&
-                  formattedArticle.tagLine.length > 10
+                  formattedArticle.tagLine.slice(-1) === ("." || "?" || "!")
                     ? formattedArticle.tagLine
                         .replace("!", "")
                         .replace("#", "number ")
