@@ -39,7 +39,7 @@ app.get("/api", async (req, res) => {
       byLineDate:
         article.children?.[3]?.children?.[5]?.children?.[3].children?.[1]?.data,
     }));
-    console.log(newFormattedArticles);
+    console.log("Butts", response.data);
     res.send(JSON.stringify([...newFormattedArticles]));
   } catch (e) {
     console.error(`Error while fetching   - ${e.message}`);

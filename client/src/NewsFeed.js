@@ -14,11 +14,11 @@ export default function NewsFeed({ isBDClicked, changeFont, hyperdrive }) {
       );
   });
 
-  console.log(formattedArticles, "api test");
+  // console.log(formattedArticles, "api test");
 
-  useEffect(() => {
-    console.log("sanity", formattedArticles);
-  }, [formattedArticles]);
+  // useEffect(() => {
+  //   console.log("sanity", formattedArticles);
+  // }, [formattedArticles]);
 
   return (
     <div className={isBDClicked ? "NewsFeedVisible" : "NewsFeedInvisible"}>
@@ -60,7 +60,8 @@ export default function NewsFeed({ isBDClicked, changeFont, hyperdrive }) {
                   </a>
                 </h1>
                 <p>
-                  {formattedArticle.tagLine
+                  {formattedArticle.tagLine &&
+                  formattedArticle.tagLine.length > 10
                     ? formattedArticle.tagLine
                         .replace("!", "")
                         .replace("#", "number ")
