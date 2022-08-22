@@ -7,14 +7,14 @@ export default function NewsFeed({ isBDClicked, changeFont, hyperdrive }) {
   const [formattedArticles, setFormattedArticles] = useState([]);
 
   useEffect(() => {
-    fetch("/api")
+    fetch("/api2")
       .then((response) => response.json())
       .then((newFormattedArticles) =>
         setFormattedArticles([...newFormattedArticles])
       );
   });
 
-  // console.log(formattedArticles, "api test");
+  console.log(formattedArticles, "api test");
 
   // useEffect(() => {
   //   console.log("sanity", formattedArticles);
@@ -60,12 +60,25 @@ export default function NewsFeed({ isBDClicked, changeFont, hyperdrive }) {
                   </a>
                 </h1>
                 <p>
-                  {formattedArticle.tagLine &&
+                  {formattedArticle.tagLine
+                    .replace("!", "")
+                    .replace("#", "number ") +
+                    (formattedArticle.tagLine2
+                      ? formattedArticle.tagLine2
+                      : "") +
+                    (formattedArticle.tagLine3
+                      ? formattedArticle.tagLine3
+                      : "")}
+                  {/* {formattedArticle.tagLine &&
+                  // formattedArticle.tagLine.length > 25
                   formattedArticle.tagLine.slice(-1) === ("." || "?" || "!")
                     ? formattedArticle.tagLine
                         .replace("!", "")
-                        .replace("#", "number ")
-                    : ""}
+                        .replace("#", "number ") +
+                      (formattedArticle.tagLine2
+                        ? formattedArticle.tagLine2
+                        : "")
+                    : ""} */}
                 </p>
 
                 <small>
