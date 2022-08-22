@@ -87,6 +87,12 @@ app.get("/api2", async (req, res) => {
       tagLine3:
         article.children?.[3]?.children?.[3]?.children?.[1]?.children?.[2]
           ?.data,
+      tagLine4:
+        article.children?.[3]?.children?.[3]?.children?.[1]?.children?.[3]
+          ?.children?.[0]?.data,
+      tagLine5:
+        article.children?.[3]?.children?.[3]?.children?.[1]?.children?.[4]
+          ?.data,
       byLineAuthor:
         article.children?.[3]?.children?.[5]?.children?.[1].children?.[1]
           ?.attribs?.title,

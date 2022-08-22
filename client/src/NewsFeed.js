@@ -60,14 +60,18 @@ export default function NewsFeed({ isBDClicked, changeFont, hyperdrive }) {
                   </a>
                 </h1>
                 <p>
-                  {formattedArticle.tagLine
-                    .replace("!", "")
-                    .replace("#", "number ") +
+                  {formattedArticle.tagLine.replace("#", "number ") +
                     (formattedArticle.tagLine2
                       ? formattedArticle.tagLine2
                       : "") +
                     (formattedArticle.tagLine3
                       ? formattedArticle.tagLine3
+                      : "") +
+                    (formattedArticle.tagLine4
+                      ? formattedArticle.tagLine4
+                      : "") +
+                    (formattedArticle.tagLine5
+                      ? formattedArticle.tagLine5
                       : "")}
                   {/* {formattedArticle.tagLine &&
                   // formattedArticle.tagLine.length > 25
