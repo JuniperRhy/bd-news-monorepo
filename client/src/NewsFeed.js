@@ -1,13 +1,10 @@
 import { useEffect, useState } from "react";
-const cors = require("cors");
-const axios = require("axios");
-const cheerio = require("cheerio");
 
 export default function NewsFeed({ isBDClicked, changeFont, hyperdrive }) {
   const [formattedArticles, setFormattedArticles] = useState([]);
 
   useEffect(() => {
-    fetch("/api2")
+    fetch("/api")
       .then((response) => response.json())
       .then((newFormattedArticles) =>
         setFormattedArticles([...newFormattedArticles])
@@ -28,7 +25,8 @@ export default function NewsFeed({ isBDClicked, changeFont, hyperdrive }) {
             .filter(
               (formattedArticle) =>
                 formattedArticle.title &&
-                // formattedArticle.tagLine &&
+                formattedArticle.title !==
+                  "20 Things We Learned from Light & Magic" &&
                 formattedArticle.byLineAuthor !== undefined
             )
             .map((formattedArticle, index) => (
@@ -73,16 +71,6 @@ export default function NewsFeed({ isBDClicked, changeFont, hyperdrive }) {
                     (formattedArticle.tagLine5
                       ? formattedArticle.tagLine5
                       : "")}
-                  {/* {formattedArticle.tagLine &&
-                  // formattedArticle.tagLine.length > 25
-                  formattedArticle.tagLine.slice(-1) === ("." || "?" || "!")
-                    ? formattedArticle.tagLine
-                        .replace("!", "")
-                        .replace("#", "number ") +
-                      (formattedArticle.tagLine2
-                        ? formattedArticle.tagLine2
-                        : "")
-                    : ""} */}
                 </p>
 
                 <small>
